@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:autofillHints=""
         android:backgroundTint="@color/colorFieldBackground"
         android:hint="@string/hint_source_field"
@@ -74,10 +74,11 @@
 
     <TextView
         android:id="@+id/result_info"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_btn"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="40dp"
         android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="30sp" />
@@ -86,8 +87,8 @@
         android:id="@+id/favourites_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/result_info"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:text="@string/favourites_link"
         android:textAlignment="center"
         android:textAllCaps="false"

@@ -7,5 +7,6 @@
     <string name="no_user_input">Введите текст</string>
     <string name="main_btn">Конвертировать</string>
     <string name="empty_field_error">Заполните все поля</string>
+    <string name="fetch_error">Не удалось загрузить курс</string>
     <string name="favourites_link"><u>избранные курсы ></u></string>
 </resources>
