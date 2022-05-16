@@ -1,12 +1,12 @@
+
 <resources>
-    <string name="app_name">Просто курсы</string>
-    <string name="logo">Курсы валют</string>
-    <string name="hint_source_field">Код исходной валюты</string>
-    <string name="hint_target_field">Код валюты для конвертации</string>
-    <string name="hint_amount_field">Сумма в исходной валюте</string>
-    <string name="no_user_input">Введите текст</string>
-    <string name="main_btn">Конвертировать</string>
-    <string name="empty_field_error">Заполните все поля</string>
-    <string name="fetch_error">Не удалось загрузить курс</string>
-    <string name="favourites_link"><u>избранные курсы ></u></string>
+<string name="app_name">Just Rates</string>
+<string name="logo">Just Rates</string>
+<string name="hint_source_field">Source currency code</string>
+<string name="hint_target_field">Target currency code</string>
+<string name="hint_amount_field">Source currency amount</string>
+<string name="main_btn">Convert</string>
+<string name="empty_field_error">Fill all the fields</string>
+<string name="fetch_error">Unable to fetch the rate</string>
+<string name="favourites_link"><u>favorite rates ></u></string>
 </resources>
