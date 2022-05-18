@@ -2,7 +2,6 @@ package com.example.simplerates
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -10,15 +9,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,15 +40,20 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, getString(R.string.empty_field_error), Toast.LENGTH_LONG).show();
             } else {
                 lifecycleScope.launch {
-                    var result = fetchRate()
+                    var result = FetchRate.fetchRate(
+                        source_field?.text?.toString(),
+                        target_field?.text?.toString(),
+                        amount_field?.text?.toString()
+                    )
+
                     withContext(Dispatchers.Main) {
                         if (result == null) {
                             result_label?.text = getString(R.string.fetch_error)
                         } else if (result_label != null) {
-                            var sourceCurrency = source_field?.text?.toString()?.trim()?.uppercase()
-                            var targetCurrency = target_field?.text?.toString()?.trim()?.uppercase()
+                            var source_currency = source_field?.text?.toString()?.trim()?.uppercase()
+                            var target_currency = target_field?.text?.toString()?.trim()?.uppercase()
                             var res_label =
-                                "${amount_field?.text?.toString()} ${sourceCurrency} = ${result} ${targetCurrency}"
+                                "${amount_field?.text?.toString()} ${source_currency} = ${result} ${target_currency}"
                             result_label?.text = res_label
                         }
                     }
@@ -68,46 +65,5 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, FavouritesActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private suspend fun fetchRate(): String? {
-        var from: String = source_field?.text.toString()
-        var to: String = target_field?.text.toString()
-        var amount: String = amount_field?.text.toString()
-        var key: String = "tGyBprkYuHRlGNGlNZ144Fiy9f9rh2Qn"
-        var url: String = "https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${from}&amount=${amount}"
-
-        var result = withContext(Dispatchers.IO) {
-            var conn: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
-            conn.setRequestProperty("apikey", key)
-            conn.connect()
-
-            val status: Int = conn.responseCode
-            if (status < 200 || status > 299) {
-                null
-            } else {
-                var input_stream = conn.inputStream
-                var input_json = JSONObject(convertInputStreamToString(input_stream))
-                var res_val = input_json.getDouble("result").toString()
-                res_val
-            }
-        }
-
-        return result
-    }
-
-    private fun convertInputStreamToString(inputStream: InputStream): String {
-        var bufferedReader: BufferedReader? = BufferedReader(InputStreamReader(inputStream))
-
-        var line: String? = bufferedReader?.readLine()
-        var result: String = ""
-
-        while (line != null) {
-            result += line
-            line = bufferedReader?.readLine()
-        }
-
-        inputStream.close()
-        return result
     }
 }
