@@ -9,4 +9,7 @@
     <string name="empty_field_error">Заполните все поля</string>
     <string name="fetch_error">Не удалось загрузить курс</string>
     <string name="favourites_link"><u>избранные курсы ></u></string>
+
+    <string name="fav_logo">Избранные курсы</string>
+    <string name="fav_add_btn">Добавить</string>
 </resources>

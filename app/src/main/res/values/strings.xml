@@ -1,12 +1,15 @@
-
 <resources>
-<string name="app_name">Just Rates</string>
-<string name="logo">Just Rates</string>
-<string name="hint_source_field">Source currency code</string>
-<string name="hint_target_field">Target currency code</string>
-<string name="hint_amount_field">Source currency amount</string>
-<string name="main_btn">Convert</string>
-<string name="empty_field_error">Fill all the fields</string>
-<string name="fetch_error">Unable to fetch the rate</string>
-<string name="favourites_link"><u>favorite rates ></u></string>
+    <string name="app_name">Just Rates</string>
+    <string name="logo">Just Rates</string>
+    <string name="hint_source_field">Source currency code</string>
+    <string name="hint_target_field">Target currency code</string>
+    <string name="hint_amount_field">Source currency amount</string>
+    <string name="main_btn">Convert</string>
+    <string name="empty_field_error">Fill all the fields</string>
+    <string name="fetch_error">Unable to fetch the rate</string>
+    <string name="favourites_link"><u>favorite rates ></u></string>
+
+    <string name="fav_logo">Favourite rates</string>
+    <string name="fav_add_btn">Add</string>
+
 </resources>

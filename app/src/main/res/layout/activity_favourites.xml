@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".FavouritesActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/fav_logo"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/input_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/logo"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <EditText
+            android:id="@+id/source_field"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/colorFieldBackground"
+            android:hint="@string/hint_source_field"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorTextAlt" />
+
+        <EditText
+            android:id="@+id/target_field"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:autofillHints=""
+            android:backgroundTint="@color/colorFieldBackground"
+            android:hint="@string/hint_target_field"
+            android:minHeight="48dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorTextAlt"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/main_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/colorButton"
+            android:text="@string/fav_add_btn" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/rates_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/input_fields"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

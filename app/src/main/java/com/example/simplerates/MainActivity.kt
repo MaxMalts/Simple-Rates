@@ -1,5 +1,6 @@
 package com.example.simplerates
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -60,6 +61,11 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+
+        favourites_link?.setOnClickListener {
+            var intent = Intent(this, FavouritesActivity::class.java)
+            startActivity(intent)
         }
     }
 
