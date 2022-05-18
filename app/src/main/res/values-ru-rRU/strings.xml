@@ -13,5 +13,5 @@
     <string name="fav_logo">Избранные курсы</string>
     <string name="fav_add_btn">Добавить</string>
     <string name="fav_delete_btn_description">Удалить</string>
-
+    <string name="fav_rate_already_exists">Курс уже в избранном</string>
 </resources>

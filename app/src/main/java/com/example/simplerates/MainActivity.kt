@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             if (arrayOf(source_field, target_field, amount_field).any {
                     it?.text?.toString()?.trim()?.equals("")!!
             }) {
-                Toast.makeText(this, getString(R.string.empty_field_error), Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.empty_field_error), Toast.LENGTH_SHORT).show();
 
             } else {
                 result_label?.text = null
