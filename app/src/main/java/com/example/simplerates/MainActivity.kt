@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }) {
                 Toast.makeText(this, getString(R.string.empty_field_error), Toast.LENGTH_LONG).show();
             } else {
-                GlobalScope.launch {
+                lifecycleScope.launch {
                     var result = fetchRate()
                     withContext(Dispatchers.Main) {
                         if (result == null) {

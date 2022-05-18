@@ -11,5 +11,6 @@
 
     <string name="fav_logo">Favourite rates</string>
     <string name="fav_add_btn">Add</string>
+    <string name="fav_delete_btn_description">Delete</string>
 
 </resources>

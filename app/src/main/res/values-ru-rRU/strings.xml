@@ -3,7 +3,7 @@
     <string name="app_name">Просто курсы</string>
     <string name="logo">Курсы валют</string>
     <string name="hint_source_field">Код исходной валюты</string>
-    <string name="hint_target_field">Код валюты для конвертации</string>
+    <string name="hint_target_field">Код целевой валюты</string>
     <string name="hint_amount_field">Сумма в исходной валюте</string>
     <string name="main_btn">Конвертировать</string>
     <string name="empty_field_error">Заполните все поля</string>
@@ -12,4 +12,6 @@
 
     <string name="fav_logo">Избранные курсы</string>
     <string name="fav_add_btn">Добавить</string>
+    <string name="fav_delete_btn_description">Удалить</string>
+
 </resources>
