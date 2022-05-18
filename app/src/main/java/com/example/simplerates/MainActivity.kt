@@ -38,7 +38,10 @@ class MainActivity : AppCompatActivity() {
                     it?.text?.toString()?.trim()?.equals("")!!
             }) {
                 Toast.makeText(this, getString(R.string.empty_field_error), Toast.LENGTH_LONG).show();
+
             } else {
+                result_label?.text = null
+
                 lifecycleScope.launch {
                     var result = FetchRate.fetchRate(
                         source_field?.text?.toString(),

@@ -19,17 +19,23 @@ class FetchRate {
             var url: String = "https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${from}&amount=${amount}"
 
             var result = withContext(Dispatchers.IO) {
-                var conn: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
-                conn.setRequestProperty("apikey", key)
+                try {
+                    var conn: HttpURLConnection = URL(url).openConnection() as HttpURLConnection
+                    conn.setRequestProperty("apikey", key)
+                    conn.connect()
 
-                val status: Int = conn.responseCode
-                if (status < 200 || status > 299) {
+                    val status: Int = conn.responseCode
+                    if (status < 200 || status > 299) {
+                        null
+                    } else {
+                        var input_stream = conn.inputStream
+                        var input_json = JSONObject(convertInputStreamToString(input_stream))
+                        var res_val = input_json.getDouble("result").toString()
+                        res_val
+                    }
+
+                } catch (err: Throwable) {
                     null
-                } else {
-                    var input_stream = conn.inputStream
-                    var input_json = JSONObject(convertInputStreamToString(input_stream))
-                    var res_val = input_json.getDouble("result").toString()
-                    res_val
                 }
             }
 
