@@ -9,7 +9,7 @@ This is an android application to fetch currency rates from the internet.
 
 ## Download
 
-You can download the .apk package in the [releases tab](./releases).
+You can download the .apk package in the releases tab.
 
 ## Build
 
