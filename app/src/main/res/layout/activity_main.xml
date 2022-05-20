@@ -57,10 +57,10 @@
         android:autofillHints=""
         android:backgroundTint="@color/colorFieldBackground"
         android:hint="@string/hint_amount_field"
+        android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColor="@color/colorText"
-        android:textColorHint="@color/colorTextAlt"
-        android:inputType="number" />
+        android:textColorHint="@color/colorTextAlt" />
 
     <Button
         android:id="@+id/main_btn"

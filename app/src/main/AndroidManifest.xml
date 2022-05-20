@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.simplerates">
+    package="com.maxmalts.simplerates">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".FavouritesActivity"
+            android:name="com.maxmalts.simplerates.FavouritesActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.maxmalts.simplerates.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

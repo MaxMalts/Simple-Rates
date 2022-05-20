@@ -1,4 +1,4 @@
-package com.example.simplerates
+package com.maxmalts.simplerates
 
 import org.junit.Test
 
