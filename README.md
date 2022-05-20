@@ -9,4 +9,8 @@ This is an android application to fetch currency rates from the internet.
 
 ## Download
 
-You can download the .apk package in the [releases tab](releases).
+You can download the .apk package in the [releases tab](./releases).
+
+## Build
+
+The app is created in Android Studio (version 2021.1.1 patch 3) so you can easily import the project to it and build.
