@@ -34,7 +34,6 @@ class FavouritesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_favourites)
 
         initAddingFields()
-        initBackBtn()
         initFavList()
     }
 
@@ -74,16 +73,6 @@ class FavouritesActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    private fun initBackBtn() {
-        var callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                var intent = Intent(this@FavouritesActivity, MainActivity::class.java)
-                startActivity(intent)
-            }
-        }
-        this.onBackPressedDispatcher.addCallback(this, callback)
     }
 
     private fun fetchNewRate(from: String?, to: String?) {
